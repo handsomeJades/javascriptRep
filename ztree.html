@@ -21,21 +21,22 @@ var zTreeObj,setting = {
 };
 
 /* 
-*	同级目录按照相对的存放顺序展示 
+*  同级目录按照相对的存放顺序展示 
 *  如果存在没有上层id的节点，那么将作为第二级节点
 */
-var zNodes =[{id:4, pId:0, name:"河北省", open:true,t:'4', nocheck:true},
-			{id:47, pId:43, name:"承德3",t:'4'},
-			{id:41, pId:4, name:"石家庄", open:false, nocheck:true},
-			{id:42, pId:4, name:"保定", open:true, nocheck:true},
-			{id:43, pId:4, name:"邯郸", open:true, nocheck:true},
-			{id:44, pId:41, name:"承德",t:'44',score:1.24},
-			{id:45, pId:42, name:"解冻",open:true},
-			{id:48, pId:43, name:"承德1"},];
+var zNodes =[{id:4, pId:0, name:"第一章",t:'4', open:true,nocheck:true},
+			{id:41, pId:4, name:"1.1",  open:true,nocheck:true},
+			{id:42, pId:4, name:"1.2", open:true, nocheck:true},
+			{id:43, pId:4, name:"1.3", open:true,nocheck:true},
+			{id:44, pId:41, name:"1.1.1",t:'44',open:true,score:1.24},
+			{id:45, pId:42, name:"1.2.1",open:true},
+			{id:48, pId:43, name:"1.3.1",open:true},
+			{id:3, pId:0, name:"第二章", open:true,t:'4', nocheck:true},
+			{id:32, pId:3, name:"2.1", open:true,t:'4', nocheck:true},];
 
-	$().ready(function(){
+$().ready(function(){
 		zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
-	});
+});
 </script>
-<div id="treeDemo" class="ztree" style="width:30%; overflow:auto; height:590px;background-color: #f5f5f5"></div> 
+<div id="treeDemo" class="ztree" style="width:30%; overflow:auto; height:590px;background-color: #f5f5f5;border-radius:25px"></div> 
 </HTML> 
